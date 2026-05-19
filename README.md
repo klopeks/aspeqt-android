@@ -7,7 +7,7 @@ podłączonych przez kabel SIO2PC-USB.
 
 ## Funkcje
 
-- **15 napędów dyskowych** (D1-D15) z obsługą formatów: ATR, XFD, PRO, ATX, DCM, SCP, DI + skompresowane gzip
+- **6 napędów dyskowych** (D1-D6) z obsługą formatów: ATR, XFD, PRO, ATX, DCM, SCP, DI + skompresowane gzip
 - **Folder Images** — bezpośrednie udostępnienie folderu z telefonu jako dysku Atari
 - **Magnetofon (CAS)**:
   - Standardowy odtwarzacz dla zwykłych obrazów kaset
@@ -77,7 +77,7 @@ GNU General Public License version 2 (or any later version) — patrz `license.t
 
 AspeQt został pierwotnie stworzony przez **Ray Ataergin** i rozwijany przez
 **greblus** ([github.com/greblus/aspeqt](https://github.com/greblus/aspeqt)).
-Ta wersja to niezależna kontynuacja autorstwa **klopeks** (2025-2026),
+Ta wersja to niezależna kontynuacja autorstwa **klopeks** (2026),
 skupiona na wsparciu nowoczesnego Androida (12+) oraz pełnych tłumaczeniach.
 
 Pełna lista zmian: zobacz [`CHANGES.md`](CHANGES.md).

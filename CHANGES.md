@@ -4,7 +4,7 @@ This is a modified version of AspeQt by Ray Ataergin and greblus.
 Original repo: https://github.com/greblus/aspeqt
 Distributed under GPL 2.0 or later (see `license.txt`).
 
-## Modifications by klopeks (2025-2026)
+## Modifications by klopeks (2026)
 
 ### Cassette engine — major rework
 
