@@ -1,61 +1,52 @@
-# AspeQt
+# AspeQt for Android
 
-Atari 8-bit SIO peripheral emulator — działa na Android (12, 13, 14, 15), Windows, Linux i macOS.
+Atari 8-bit SIO peripheral emulator dla Androida (12, 13, 14, 15+).
 
-Emuluje stacje dysków, magnetofon, drukarkę i system plików dla komputerów Atari 8-bit
-podłączonych przez kabel SIO2PC-USB lub moduł Bluetooth SIO2BT.
+Zamienia smartfon w stację dysków, magnetofon i drukarkę dla komputerów Atari 8-bit
+podłączonych przez kabel SIO2PC-USB.
 
 ## Funkcje
 
 - **15 napędów dyskowych** (D1-D15) z obsługą formatów: ATR, XFD, PRO, ATX, DCM, SCP, DI + skompresowane gzip
-- **Folder Images** — bezpośrednie udostępnienie folderu z hosta jako dysku Atari
+- **Folder Images** — bezpośrednie udostępnienie folderu z telefonu jako dysku Atari
 - **Magnetofon (CAS)**:
   - Standardowy odtwarzacz dla zwykłych obrazów kaset
   - **Drugi silnik z dekoderem FSK** (algorytm inspirowany [liba8cas](https://sourceforge.net/projects/a8cas/))
     odtwarza obrazy z fragmentami FSK, których stary AspeQt nie umiał
-- **Autoboot programów Atari** (XEX, COM, EXE) z dysku hosta
+- **Autoboot programów Atari** (XEX, COM, EXE)
   - Workflow Retry / Open / Cancel
 - **Drukarka tekstowa** (ATASCII / ASCII)
-- **PCLINK** — pełny system plików hosta jako urządzenie SIO
-- **Backendy**: SIO2PC-USB (FTDI) oraz SIO2BT (Bluetooth)
+- **PCLINK** — pełny system plików telefonu jako urządzenie SIO
 - **8 języków interfejsu**: polski, angielski, niemiecki, hiszpański, francuski, rosyjski, słowacki, turecki
 
 ## Wymagania
 
-### Środowisko developerskie
+### Sprzęt do uruchomienia
+
+| Element | Wymaganie |
+|---------|-----------|
+| **Telefon** | Android 6.0+ (API 23), USB Host/OTG, ekran w trybie pionowym |
+| **Kabel** | SIO2PC-USB z chipem FTDI FT232R (np. Lotharek) |
+| **Adapter** | USB-C → USB-A OTG (do podłączenia kabla do telefonu) |
+| **Atari 8-bit** | dowolny model z portem SIO |
+
+### Środowisko developerskie (budowa APK)
 
 | Komponent | Wersja |
 |-----------|--------|
-| Qt | 6.11+ (moduły: core, gui, widgets, printsupport, svg, core5compat) |
-| C++ Compiler | MinGW 64-bit / GCC / Clang (C++17) |
-| Java JDK | 17 (dla Androida) |
-| Android NDK | wersja dostarczana przez Qt 6.11 (~26.3) |
+| Qt | 6.11+ for Android (moduły: core, gui, widgets, printsupport, svg, core5compat) |
+| Java JDK | 17 |
+| Android NDK | dostarczany przez Qt (~26.3) |
 | Android SDK | API 34, minSdk 23 |
 
-### Sprzęt do uruchomienia
+## Budowanie APK
 
-| Platforma | Wymagania |
-|-----------|-----------|
-| **Android** | Android 6.0+ (API 23), USB Host/OTG dla SIO2PC-USB, Bluetooth dla SIO2BT |
-| **Desktop** | Windows 7+, Linux, macOS; port szeregowy lub adapter SIO2PC |
-| **Atari 8-bit** | dowolny model + kabel SIO2PC-USB (np. Lotharek) lub moduł SIO2BT |
-
-## Budowanie
-
-### Desktop (Qt Creator)
-
-1. Otwórz `aspeqt.pro` w Qt Creator
-2. Wybierz kit Desktop (MinGW 64-bit / GCC / Clang)
-3. Build → Run
-
-### Android (Qt Creator)
-
-1. W Qt Maintenance Tool zainstaluj:
+1. W **Qt Maintenance Tool** zainstaluj:
    - Qt 6.11 → Android
-   - NDK i Android SDK (Qt zrobi to po wskazaniu JDK 17)
+   - NDK i Android SDK (Qt Creator zrobi to po wskazaniu JDK 17)
 2. Otwórz `aspeqt.pro` w Qt Creator
-3. Wybierz kit Android (arm64-v8a)
-4. Build — wygenerowany APK znajdziesz w katalogu build
+3. Wybierz kit **Android arm64-v8a**
+4. Build → wygenerowany APK znajdziesz w katalogu build
 
 ### Tłumaczenia
 
@@ -68,7 +59,7 @@ lrelease i18n/aspeqt_pl.ts
 
 ## Pierwsze uruchomienie
 
-1. Podłącz kabel SIO2PC-USB do telefonu przez OTG
+1. Podłącz kabel SIO2PC-USB do telefonu przez adapter OTG
 2. Połącz drugi koniec z portem SIO Atari
 3. Uruchom AspeQt, w opcjach ustaw:
    - **Interface**: SIO2PC (USB)
