@@ -95,7 +95,6 @@ Pełna lista zmian: zobacz [`CHANGES.md`](CHANGES.md).
 - **SimpleFileDialog** — Hagai Shatz (CPOL 1.02)
 - **liba8cas** — Tomasz Krasuski (GPL 3+) — algorytm dekodera FSK jako inspiracja
   (kod nie został skopiowany, własna implementacja w C++/Qt na podstawie opisu algorytmu)
-- **Tango Icon Library** (Public Domain)
 
 ---
 <a name="english"></a>
@@ -197,4 +196,3 @@ Full list of changes: see [`CHANGES.md`](CHANGES.md).
 - **SimpleFileDialog** — Hagai Shatz (CPOL 1.02)
 - **liba8cas** — Tomasz Krasuski (GPL 3+) — FSK decoder algorithm as inspiration
   (no code was copied; the decoder is a fresh C++/Qt implementation based on the algorithm description)
-- **Tango Icon Library** (Public Domain)
