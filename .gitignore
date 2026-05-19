@@ -1,0 +1,59 @@
+# Qt Creator local config
+aspeqt.pro.user*
+.qtcreator/
+
+# Build artifacts
+build/
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.exp
+
+# Qt generated
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.moc
+Makefile
+Makefile.*
+
+# Android build output
+android/apk/
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.aab
+*.idsig
+
+# IDE / editor
+.vscode/
+.idea/
+*.user
+*.user.*
+*.autosave
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary / WIP
+_tmp_*
+*.tmp
+*.bak
+*.orig
+
+# Claude / AI assistant local data
+.claude/

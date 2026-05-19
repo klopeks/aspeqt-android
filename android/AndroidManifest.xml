@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.qtproject.example.AspeQt" android:installLocation="auto" android:versionCode="207" android:versionName="1.0.0">
+    <!-- %%INSERT_PERMISSIONS -->
+    <!-- %%INSERT_FEATURES -->
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <application android:name="org.qtproject.qt.android.bindings.QtApplication" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:label="-- %%INSERT_APP_NAME%% --" android:icon="@drawable/icon" android:allowNativeHeapPointerTagging="false" android:allowBackup="false" android:fullBackupContent="false">
+        <activity android:name="net.greblus.SerialActivity" android:exported="true" android:theme="@android:style/Theme.Holo" android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:label="-- %%INSERT_APP_NAME%% --" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+            </intent-filter>
+            <meta-data android:name="android.app.lib_name" android:value="-- %%INSERT_APP_LIB_NAME%% --"/>
+            <meta-data android:name="android.app.arguments" android:value="-- %%INSERT_APP_ARGUMENTS%% --"/>
+            <meta-data android:name="android.app.extract_android_style" android:value="minimal"/>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter"/>
+        </activity>
+    </application>
+
+    <!-- Storage: legacy permissions only on Android <= 10 (API 29). -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="29"/>
+
+    <!-- Etap 2: full external storage access. Lets the user browse and pick
+         .atr/.cas/.xex from anywhere on /sdcard (Download, custom folders).
+         The user must explicitly toggle this on in Android Settings → Apps →
+         AspeQt → Permissions → All files access; aspeqt opens that page on
+         first launch. -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+
+    <!-- Legacy Bluetooth permissions only on Android <= 11 (API 30) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+
+    <!-- Modern Bluetooth permissions for Android 12+ (API 31+).
+         neverForLocation hint declares we don't derive physical location from BT scan results. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+</manifest>

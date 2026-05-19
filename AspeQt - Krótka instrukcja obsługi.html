@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AspeQt 1.0.0 - Krótka instrukcja obsługi</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      color: #1e1e1e;
+      background: #f3f3f3;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 36px 42px;
+      box-sizing: border-box;
+    }
+    h1, h2 {
+      color: #0f4d2b;
+      margin-top: 0;
+    }
+    h2 {
+      margin-top: 28px;
+      border-bottom: 2px solid #d7e6da;
+      padding-bottom: 6px;
+    }
+    p, li {
+      font-size: 15px;
+    }
+    ul, ol {
+      padding-left: 22px;
+    }
+    .note {
+      background: #eef7f0;
+      border-left: 4px solid #3f8b4b;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+    .warn {
+      background: #fff4e8;
+      border-left: 4px solid #d9822b;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+    .small {
+      color: #666666;
+      font-size: 13px;
+    }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      background: #f6f6f6;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AspeQt 1.0.0 - Krótka instrukcja obsługi</h1>
+    <p>AspeQt służy do obsługi urządzeń Atari przez telefon lub komputer z wykorzystaniem interfejsu SIO2PC/USB. Program umożliwia montowanie obrazów dyskietek, uruchamianie plików wykonywalnych <code>XEX</code> oraz odtwarzanie obrazów kaset <code>CAS</code>.</p>
+
+    <h2>1. Co jest potrzebne</h2>
+    <ul>
+      <li>komputer Atari 8-bit,</li>
+      <li>interfejs SIO2PC / SIO2PC-USB / zgodny adapter USB,</li>
+      <li>kabel SIO do Atari,</li>
+      <li>telefon z Androidem lub komputer z uruchomionym AspeQt,</li>
+      <li>w przypadku Androida: przewód USB OTG, jeśli jest wymagany przez adapter.</li>
+    </ul>
+
+    <h2>2. Podłączenie</h2>
+    <ol>
+      <li>Podłącz interfejs do złącza SIO w Atari.</li>
+      <li>Drugi koniec podłącz do telefonu lub komputera, na którym działa AspeQt.</li>
+      <li>W Androidzie, jeśli system o to poprosi, zezwól aplikacji na dostęp do urządzenia USB.</li>
+      <li>W razie potrzeby nadaj aplikacji dostęp do plików, aby mogła otwierać obrazy z pamięci telefonu.</li>
+    </ol>
+
+    <div class="note">
+      Najwygodniej najpierw podłączyć kabel, a dopiero potem uruchomić Atari i aplikację.
+    </div>
+
+    <h2>3. Uruchomienie programu</h2>
+    <ol>
+      <li>Uruchom AspeQt.</li>
+      <li>Na dole ekranu użyj zielonej ikony startu emulacji.</li>
+      <li>Po uruchomieniu emulacji aplikacja jest gotowa do obsługi dysków, plików <code>XEX</code> i kaset <code>CAS</code>.</li>
+    </ol>
+
+    <h2>4. Dyskietki - podstawowa obsługa</h2>
+    <p>Każdy wiersz oznacza jedną stację dysków od <code>D1:</code> do <code>D6:</code>.</p>
+    <ul>
+      <li>ikona dyskietki: zamontowanie obrazu dysku,</li>
+      <li>ikona folderu: zamontowanie katalogu jako obrazu folderowego,</li>
+      <li>ikona wysuwania: odmontowanie,</li>
+      <li>pozostałe ikony: zapis, edycja i funkcje dodatkowe.</li>
+    </ul>
+    <p>Po zamontowaniu obrazu nazwa pliku pojawia się pod wierszem stacji dysków.</p>
+
+    <h2>5. Uruchamianie plików XEX</h2>
+    <ol>
+      <li>Wybierz w menu opcję uruchomienia pliku wykonywalnego.</li>
+      <li>Aplikacja przygotuje środowisko i odłączy zamontowane dyski przed startem <code>XEX</code>.</li>
+      <li>Wskaż plik <code>XEX</code>.</li>
+      <li>Postępuj zgodnie z instrukcją na ekranie.</li>
+      <li>Jeśli program tego wymaga, uruchom Atari ponownie z wyłączonym BASIC-em, przytrzymując klawisz <code>OPTION</code>.</li>
+    </ol>
+
+    <div class="note">
+      W oknie ładowania <code>XEX</code> można ponowić uruchomienie tego samego pliku albo od razu otworzyć następny, bez wracania do ekranu głównego.
+    </div>
+
+    <h2>6. Kasety CAS</h2>
+    <ol>
+      <li>Wybierz odtwarzanie pliku kasety.</li>
+      <li>Wskaż obraz <code>CAS</code>.</li>
+      <li>Na Atari uruchom ładowanie z kasety zgodnie z instrukcją wyświetloną przez program.</li>
+    </ol>
+    <p>Podczas odtwarzania aplikacja pokazuje animację kasety oraz nazwę aktualnie ładowanego pliku.</p>
+
+    <h2>7. Znane uwagi i typowe problemy</h2>
+    <div class="warn">
+      Niektóre kasety z charakterystycznym ekranem lub grafiką Fuji mogą zachowywać się inaczej niż na oryginalnym magnetofonie. Nie jest to koniecznie błąd programu. Część takich nagrań ma własne niestandardowe zachowanie lub bardzo wrażliwe timingi.
+    </div>
+    <ul>
+      <li>Nie każdy plik <code>XEX</code> daje się uruchomić identycznie. Część programów ma niestandardowy loader lub nietypowe wymagania.</li>
+      <li>Jeżeli Atari nie widzi urządzenia, sprawdź kabel, adapter USB, zasilanie oraz uprawnienia systemowe.</li>
+      <li>Jeżeli pliki nie otwierają się z pamięci telefonu, sprawdź dostęp aplikacji do pamięci urządzenia.</li>
+      <li>Przy problemach z transmisją warto odłączyć i ponownie podłączyć interfejs oraz uruchomić emulację jeszcze raz.</li>
+      <li>Niektóre niestandardowe obrazy kaset i programy turbo mogą wymagać prób z różnymi ustawieniami lub mogą nie działać idealnie.</li>
+    </ul>
+
+    <h2>8. Dobre praktyki</h2>
+    <ul>
+      <li>Przed testami nowych plików dobrze jest zatrzymać emulację i uruchomić ją ponownie.</li>
+      <li>W przypadku <code>XEX</code> nie należy ręcznie zostawiać innych nośników, jeśli program ma startować jako samodzielny plik wykonywalny.</li>
+      <li>Jeśli edytujesz pliki lub zasoby programu, warto robić kopie zapasowe całego projektu przed większymi zmianami.</li>
+    </ul>
+
+    <h2>9. Krótko o ikonach dolnych</h2>
+    <ul>
+      <li>zielona ikona: start / stop emulacji,</li>
+      <li>drukarka: włączenie lub wyłączenie emulacji drukarki,</li>
+      <li>miotła: czyszczenie komunikatów w oknie logów.</li>
+    </ul>
+
+    <p class="small">Dokument przygotowany dla AspeQt 1.0.0. W razie dalszych zmian w interfejsie lub ikonach warto zaktualizować ten opis przed przygotowaniem PDF.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="file_open">Öffnen:</string>
+    <string name="file_save_as">Speichern unter:</string>
+    <string name="folder_select">Verzeichnis wählen:</string>
+    <string name="failed_create">Verzeichnis \'</string>
+    <string name="failed_folder">\' kann nicht erstellt werden</string>
+    <string name="file_cancel">Abbrechen</string>
+    <string name="new_folder">Neues Verzeichnis</string>
+    <string name="new_folder_name">Verzeichnisname:</string>
+    <string name="file_chosen">Datei gewählt: </string>
+    <string name="dir_chosen">Verzeichnis gewählt: </string>
+    <string name="bt_module_check">Bluetooth einschalten, BT-Modulnamen in den Optionen prüfen und sicherstellen, dass es gekoppelt ist</string>
+    <string name="bt_try_connecting">Verbinde mit SIO2BT. Bitte warten…</string>
+    <string name="bt_connected">Mit SIO2BT verbunden.</string>
+    <string name="bt_failed_connecting">Verbindung mit SIO2BT fehlgeschlagen. Erneut versuchen…</string>
+    <string name="sio2pc_connected">Mit SIO2PC-USB verbunden.</string>
+    <string name="sio2pc_failed_connecting">Verbindung mit SIO2PC-USB fehlgeschlagen.</string>
+    <string name="sio2pc_no_permissions">Keine Berechtigung für SIO2PC-USB.</string>
+    <string name="sio2pc_not_attached">SIO2PC-USB ist nicht angeschlossen.</string>
+    <string name="bt_module_not_present">Kein BT-Modul vorhanden.</string>
+
+    <!-- Dialog für Dateizugriff (Etap 2) -->
+    <string name="perm_files_title">Dateizugriffsberechtigung</string>
+    <string name="perm_files_body">AspeQt benötigt Zugriff auf Dateien auf deinem Telefon, damit du .atr / .cas / .xex Images aus beliebigen Ordnern auswählen kannst (Download, dein eigener Atari-Ordner usw.).\n\nAndroid erfordert, dass diese Art von Zugriff manuell in den Systemeinstellungen aktiviert wird — es gibt dafür kein Erlauben/Ablehnen-Popup.\n\nTippe auf OK, um die Einstellungen jetzt zu öffnen. Aktiviere einfach \"Zugriff zur Verwaltung aller Dateien zulassen\" und komme zurück. Du musst dies nur einmal tun.</string>
+    <string name="perm_files_ok">OK, Einstellungen öffnen</string>
+    <string name="perm_files_skip">Überspringen (eingeschränkter Zugriff)</string>
+    <string name="perm_files_skipped_toast">OK — die Dateiauswahl sieht nur /Android/data/.../files/. Du kannst den vollen Zugriff später unter Android-Einstellungen → Apps → AspeQt aktivieren.</string>
+
+    <!-- USB-Berechtigungsdialog -->
+    <string name="usb_grant_then_retry">USB-Berechtigung erteilen und dann erneut auf Start klicken</string>
+</resources>

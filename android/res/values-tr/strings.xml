@@ -1,0 +1,31 @@
+<resources>
+    <string name="file_open">Aç:</string>
+    <string name="file_save_as">Farklı kaydet:</string>
+    <string name="folder_select">Dizin seç:</string>
+    <string name="failed_create">Dizin \'</string>
+    <string name="failed_folder">\' oluşturulamadı</string>
+    <string name="file_cancel">İptal</string>
+    <string name="new_folder">Yeni dizin</string>
+    <string name="new_folder_name">Dizin adı:</string>
+    <string name="file_chosen">Seçilen dosya: </string>
+    <string name="dir_chosen">Seçilen dizin: </string>
+    <string name="bt_module_check">BT\'yi açın, seçeneklerde BT modül adınızı kontrol edin ve eşleştirildiğinden emin olun</string>
+    <string name="bt_try_connecting">SIO2BT\'ye bağlanılıyor. Lütfen bekleyin…</string>
+    <string name="bt_connected">SIO2BT\'ye bağlandı.</string>
+    <string name="bt_failed_connecting">SIO2BT\'ye bağlanılamadı. Tekrar deneyin…</string>
+    <string name="sio2pc_connected">SIO2PC-USB\'ye bağlandı.</string>
+    <string name="sio2pc_failed_connecting">SIO2PC-USB\'ye bağlanılamadı.</string>
+    <string name="sio2pc_no_permissions">SIO2PC-USB için izin yok.</string>
+    <string name="sio2pc_not_attached">SIO2PC-USB bağlı değil.</string>
+    <string name="bt_module_not_present">BT modülü mevcut değil.</string>
+
+    <!-- Dosya erişim izni iletişim kutusu (Etap 2) -->
+    <string name="perm_files_title">Dosya erişim izni</string>
+    <string name="perm_files_body">AspeQt, telefonunuzdaki dosyalara erişmesi gerekiyor, böylece .atr / .cas / .xex görüntülerini herhangi bir klasörden (İndirilenler, kendi Atari klasörünüz vb.) seçebilirsiniz.\n\nAndroid bu tür erişimin sistem Ayarları\'nda manuel olarak etkinleştirilmesini gerektirir — bunun için bir İzin Ver/Reddet açılır penceresi yoktur.\n\nAyarları şimdi açmak için Tamam\'a dokunun. Sadece \"Tüm dosyaları yönetme erişimine izin ver\" seçeneğini açın ve geri gelin. Bunu yalnızca bir kez yapmanız gerekir.</string>
+    <string name="perm_files_ok">Tamam, Ayarları aç</string>
+    <string name="perm_files_skip">Atla (sınırlı erişim)</string>
+    <string name="perm_files_skipped_toast">Tamam — dosya seçici yalnızca /Android/data/.../files/ klasörünü görecek. Tam erişimi daha sonra Android Ayarlar → Uygulamalar → AspeQt\'ten etkinleştirebilirsiniz.</string>
+
+    <!-- USB izin iletişim kutusu -->
+    <string name="usb_grant_then_retry">USB iznini verin, ardından tekrar Başlat\'a tıklayın</string>
+</resources>

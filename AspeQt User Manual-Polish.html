@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Instrukcja AspeQt</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    color: #202020;
+}
+h1, h2 {
+    color: #143a63;
+}
+h1 {
+    margin-bottom: 0.2em;
+}
+h2 {
+    margin-top: 1.6em;
+}
+p, li {
+    font-size: 14px;
+}
+code {
+    font-family: Consolas, monospace;
+}
+</style>
+</head>
+<body>
+<h1>Instrukcja AspeQt</h1>
+<p>Ta instrukcja opisuje aktualny build AspeQt znajdujący się w tym projekcie. Skupia się na funkcjach dostępnych teraz, szczególnie na Androidzie.</p>
+
+<h2>Do Czego Służy AspeQt</h2>
+<p>AspeQt jest emulatorem urządzeń szeregowych Atari 8-bit opartym na Qt. Potrafi emulować stacje dysków, obrazy folderów, odtwarzanie kaset oraz wyjście drukarki przez połączenie zgodne z SIO2PC.</p>
+<ul>
+<li>6 stacji dysków</li>
+<li>obsługa obrazów ATR, XFD, ATX i PRO</li>
+<li>obrazy folderów</li>
+<li>bezpośrednie uruchamianie plików wykonywalnych Atari, takich jak XEX, COM i EXE</li>
+<li>odtwarzanie kaset z plików CAS</li>
+<li>emulacja drukarki z podglądem tekstu</li>
+<li>zapisywanie i przywracanie sesji</li>
+</ul>
+
+<h2>Ekran Główny</h2>
+<p>Każdy wiersz dysku zawiera numer stacji oraz przyciski do montowania, zapisu, edycji i wysuwania nośnika. Na Androidzie interfejs jest zoptymalizowany pod orientację pionową. Po zamontowaniu dysku lub folderu nazwa pliku jest pokazywana pod danym wierszem.</p>
+<p>Obszar komunikatów poniżej stacji pokazuje zdarzenia programu, takie jak montowanie obrazów, stan drukarki oraz komunikaty startu i zatrzymania emulacji.</p>
+
+<h2>Obrazy Dysków</h2>
+<p>Obraz dysku możesz zamontować na kilka sposobów:</p>
+<ul>
+<li>używając przycisku dysku w danym wierszu stacji</li>
+<li>używając komendy montowania z głównego menu</li>
+<li>wybierając ostatnio używany obraz z listy recent</li>
+<li>przeciągając plik na wiersz stacji</li>
+</ul>
+<p>Po zamontowaniu Atari widzi wybrany obraz jak zwykłą stację. Możesz wtedy zapisać zmiany, włączyć lub wyłączyć ochronę przed zapisem, otworzyć eksplorator obrazu albo wysunąć dysk.</p>
+
+<h2>Obrazy Folderów</h2>
+<p>Obraz folderu udostępnia folder z urządzenia hosta jako nośnik Atari. W interfejsie jest oznaczony innym kolorem nazwy, żeby łatwo odróżnić go od zwykłego obrazu dysku.</p>
+
+<h2>Uruchamianie Plików Wykonywalnych Atari</h2>
+<p>AspeQt potrafi uruchamiać pliki wykonywalne bez tworzenia obrazu dysku. Możesz otworzyć plik z menu albo przeciągnąć go do okna.</p>
+<p>Przed startem pliku wykonywalnego AspeQt przygotowuje emulator do czystego uruchomienia. Na Androidzie oznacza to zatrzymanie emulacji, usunięcie zamontowanych dysków i ponowne uruchomienie emulacji przed załadowaniem pliku.</p>
+<p>Po załadowaniu pliku okno dialogowe pozostaje otwarte i oferuje:</p>
+<ul>
+<li><strong>Ponów</strong> aby uruchomić ponownie ten sam plik</li>
+<li><strong>Otwórz</strong> aby wybrać inny plik wykonywalny bez wracania do głównego ekranu</li>
+<li><strong>Anuluj</strong> aby zamknąć okno</li>
+</ul>
+<p>W opcjach emulacji dostępny jest także szybki loader plików wykonywalnych. Zgodność nadal zależy od konkretnego programu, więc część plików może wymagać zwykłego loadera.</p>
+
+<h2>Odtwarzanie Kaset</h2>
+<p>Pliki CAS można odtwarzać przez funkcję kaset. AspeQt może używać prędkości zapisanej w obrazie albo własnej wartości ustawionej w opcjach.</p>
+
+<h2>Emulacja Drukarki</h2>
+<p>AspeQt emuluje tekstową drukarkę Atari <code>P1:</code>. Emulację drukarki można uruchamiać i zatrzymywać z głównego okna. Wyjście drukarki można podejrzeć, zapisać albo wydrukować.</p>
+
+<h2>Opcje i Język</h2>
+<p>Okno opcji przechowuje ustawienia sprzętu, prędkości i języka. Jeśli język ustawiony jest na <code>auto</code>, AspeQt używa lokalizacji systemu. Jeśli wybierzesz konkretny język, interfejs korzysta z tej preferencji.</p>
+<p>Okno instrukcji również podąża za wybranym językiem aplikacji, jeśli dostępna jest przetłumaczona wersja instrukcji.</p>
+
+<h2>Sesje</h2>
+<p>Sesje pozwalają zapisać aktualny układ dysków i wybrane ustawienia, aby później odtworzyć to samo środowisko pracy.</p>
+
+<h2>Uwagi</h2>
+<ul>
+<li>Część zaawansowanych funkcji zależy od podłączonego sprzętu SIO2PC i wybranego backendu szeregowego.</li>
+<li>Tryby high speed zależą od jakości kabla, metody handshake i wsparcia po stronie Atari.</li>
+<li>Bezpośrednie uruchamianie plików wykonywalnych jest wygodne, ale nie każdy program Atari jest z nim zgodny.</li>
+</ul>
+</body>
+</html>

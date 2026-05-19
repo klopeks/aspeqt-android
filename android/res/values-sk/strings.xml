@@ -1,0 +1,31 @@
+<resources>
+    <string name="file_open">Otvoriť:</string>
+    <string name="file_save_as">Uložiť ako:</string>
+    <string name="folder_select">Vybrať priečinok:</string>
+    <string name="failed_create">Priečinok \'</string>
+    <string name="failed_folder">\' sa nedá vytvoriť</string>
+    <string name="file_cancel">Zrušiť</string>
+    <string name="new_folder">Nový priečinok</string>
+    <string name="new_folder_name">Názov priečinku:</string>
+    <string name="file_chosen">Vybraný súbor: </string>
+    <string name="dir_chosen">Vybraný priečinok: </string>
+    <string name="bt_module_check">Zapnite BT, skontrolujte názov BT modulu v nastaveniach a uistite sa, že je spárované</string>
+    <string name="bt_try_connecting">Pripájanie k SIO2BT. Prosím čakajte…</string>
+    <string name="bt_connected">Pripojené k SIO2BT.</string>
+    <string name="bt_failed_connecting">Nepodarilo sa pripojiť k SIO2BT. Skúste znova…</string>
+    <string name="sio2pc_connected">Pripojené k SIO2PC-USB.</string>
+    <string name="sio2pc_failed_connecting">Nepodarilo sa pripojiť k SIO2PC-USB.</string>
+    <string name="sio2pc_no_permissions">Žiadne oprávnenia pre SIO2PC-USB.</string>
+    <string name="sio2pc_not_attached">SIO2PC-USB nie je pripojené.</string>
+    <string name="bt_module_not_present">BT modul nie je dostupný.</string>
+
+    <!-- Dialóg povolenia prístupu k súborom (Etap 2) -->
+    <string name="perm_files_title">Povolenie prístupu k súborom</string>
+    <string name="perm_files_body">AspeQt potrebuje prístup k súborom v telefóne, aby ste mohli vyberať obrazy .atr / .cas / .xex z ľubovoľného priečinku (Stiahnuté, váš vlastný priečinok Atari atď.).\n\nAndroid vyžaduje, aby bol tento typ prístupu povolený manuálne v systémových Nastaveniach — neexistuje preň okno Povoliť/Zamietnuť.\n\nKliknite na OK pre otvorenie Nastavení. Stačí zapnúť \"Povoliť prístup pre správu všetkých súborov\" a vrátiť sa. Stačí to urobiť iba raz.</string>
+    <string name="perm_files_ok">OK, otvoriť Nastavenia</string>
+    <string name="perm_files_skip">Preskočiť (obmedzený prístup)</string>
+    <string name="perm_files_skipped_toast">OK — výber súborov bude obmedzený na /Android/data/.../files/. Plný prístup môžete zapnúť neskôr v Nastavenia Android → Aplikácie → AspeQt.</string>
+
+    <!-- Dialóg povolenia USB -->
+    <string name="usb_grant_then_retry">Udeľte oprávnenie USB a potom kliknite na Spustiť znova</string>
+</resources>

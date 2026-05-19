@@ -1,0 +1,31 @@
+<resources>
+    <string name="file_open">Открыть:</string>
+    <string name="file_save_as">Сохранить как:</string>
+    <string name="folder_select">Выбор каталога:</string>
+    <string name="failed_create">Каталог \'</string>
+    <string name="failed_folder">\' не может быть создан</string>
+    <string name="file_cancel">Отмена</string>
+    <string name="new_folder">Новый каталог</string>
+    <string name="new_folder_name">Имя каталога:</string>
+    <string name="file_chosen">Файл выбран: </string>
+    <string name="dir_chosen">Каталог выбран: </string>
+    <string name="bt_module_check">Включите BT, проверьте имя модуля BT в настройках и убедитесь, что он сопряжён</string>
+    <string name="bt_try_connecting">Подключение к SIO2BT. Пожалуйста, подождите…</string>
+    <string name="bt_connected">Подключено к SIO2BT.</string>
+    <string name="bt_failed_connecting">Не удалось подключиться к SIO2BT. Попробуйте ещё раз…</string>
+    <string name="sio2pc_connected">Подключено к SIO2PC-USB.</string>
+    <string name="sio2pc_failed_connecting">Не удалось подключиться к SIO2PC-USB.</string>
+    <string name="sio2pc_no_permissions">Нет разрешений для SIO2PC-USB.</string>
+    <string name="sio2pc_not_attached">SIO2PC-USB не подключён.</string>
+    <string name="bt_module_not_present">BT-модуль отсутствует.</string>
+
+    <!-- Диалог разрешения доступа к файлам (Etap 2) -->
+    <string name="perm_files_title">Разрешение доступа к файлам</string>
+    <string name="perm_files_body">AspeQt нужен доступ к файлам на телефоне, чтобы вы могли выбирать образы .atr / .cas / .xex из любой папки (Загрузки, ваша папка Atari и т. д.).\n\nAndroid требует, чтобы такой доступ включался вручную в системных Настройках — для него нет всплывающего окна Разрешить/Запретить.\n\nНажмите OK, чтобы открыть Настройки. Просто включите \"Разрешить доступ для управления всеми файлами\" и вернитесь. Это нужно сделать только один раз.</string>
+    <string name="perm_files_ok">OK, открыть Настройки</string>
+    <string name="perm_files_skip">Пропустить (ограниченный доступ)</string>
+    <string name="perm_files_skipped_toast">OK — выбор файлов будет ограничен /Android/data/.../files/. Полный доступ можно включить позже в Настройки Android → Приложения → AspeQt.</string>
+
+    <!-- Диалог разрешения USB -->
+    <string name="usb_grant_then_retry">Предоставьте разрешение USB, затем снова нажмите Запуск</string>
+</resources>

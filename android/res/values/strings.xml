@@ -1,0 +1,31 @@
+<resources>
+    <string name="file_open">Open:</string>
+    <string name="file_save_as">Save As:</string>
+    <string name="folder_select">Choose directory:</string>
+    <string name="failed_create">Directory \'</string>
+    <string name="failed_folder">\' cannot be created</string>
+    <string name="file_cancel">Cancel</string>
+    <string name="new_folder">New directory</string>
+    <string name="new_folder_name">Directory name:</string>
+    <string name="file_chosen">File chosen:\u0020</string>
+    <string name="dir_chosen">Dir chosen:\u0020</string>
+    <string name="bt_module_check">Turn BT on, check your BT module name set in options and make sure it\'s paired</string>
+    <string name="bt_try_connecting">Connecting with SIO2BT. Please wait...</string>
+    <string name="bt_connected">Connected with SIO2BT.</string>
+    <string name="bt_failed_connecting">Failed to connect with SIO2BT. Try again...</string>
+    <string name="sio2pc_connected">Connected with SIO2PC-USB.</string>
+    <string name="sio2pc_failed_connecting">Failed to connect with SIO2PC-USB.</string>
+    <string name="sio2pc_no_permissions">No permissions for SIO2PC-USB.</string>
+    <string name="sio2pc_not_attached">SIO2PC-USB is not attached.</string>
+    <string name="bt_module_not_present">BT module not present.</string>
+
+    <!-- All-files-access permission dialog (Etap 2) -->
+    <string name="perm_files_title">File access permission</string>
+    <string name="perm_files_body">AspeQt needs access to files on your phone so you can pick .atr / .cas / .xex images from any folder (Download, your own Atari folder, etc.).\n\nAndroid requires this kind of access to be enabled manually in system Settings — there is no Allow/Deny popup for it.\n\nTap OK to open Settings now. Just toggle on \"Allow access to manage all files\" and come back. You only need to do this once.</string>
+    <string name="perm_files_ok">OK, open Settings</string>
+    <string name="perm_files_skip">Skip (limited access)</string>
+    <string name="perm_files_skipped_toast">OK — file picker will only see /Android/data/.../files/. You can enable full access later in Android Settings → Apps → AspeQt.</string>
+
+    <!-- USB permission flow -->
+    <string name="usb_grant_then_retry">Grant USB permission, then click Start again</string>
+</resources>

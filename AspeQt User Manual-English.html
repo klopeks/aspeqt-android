@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AspeQt User Manual</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    color: #202020;
+}
+h1, h2 {
+    color: #143a63;
+}
+h1 {
+    margin-bottom: 0.2em;
+}
+h2 {
+    margin-top: 1.6em;
+}
+p, li {
+    font-size: 14px;
+}
+code {
+    font-family: Consolas, monospace;
+}
+</style>
+</head>
+<body>
+<h1>AspeQt User Manual</h1>
+<p>This manual describes the current AspeQt build included with this project. It focuses on the features that are available today, especially on Android.</p>
+
+<h2>What AspeQt Does</h2>
+<p>AspeQt is an Atari 8-bit serial peripheral emulator built with Qt. It can emulate disk drives, folder-based images, cassette playback and printer output through a SIO2PC-compatible connection.</p>
+<ul>
+<li>6 disk stations</li>
+<li>ATR, XFD, ATX and PRO disk image support</li>
+<li>Folder images</li>
+<li>Direct booting of Atari executable files such as XEX, COM and EXE</li>
+<li>Cassette playback from CAS files</li>
+<li>Printer emulation with text preview</li>
+<li>Session save and restore</li>
+</ul>
+
+<h2>Main Screen</h2>
+<p>Each disk row contains a station number and action buttons for mounting, saving, editing and ejecting media. On Android, the interface is optimized for portrait orientation. When a disk or folder image is mounted, its file name is shown below the row.</p>
+<p>The message area below the disk rows shows runtime events such as mounted images, printer state and emulator start/stop notifications.</p>
+
+<h2>Disk Images</h2>
+<p>You can mount a disk image in several ways:</p>
+<ul>
+<li>Use the disk button in a station row</li>
+<li>Use the main menu command for mounting a disk image</li>
+<li>Open a recent image from the recent list</li>
+<li>Drag and drop an image onto a disk row</li>
+</ul>
+<p>After mounting, the Atari sees the selected image as a drive. You can then save changes, enable or disable write protection, open the image explorer or eject the image.</p>
+
+<h2>Folder Images</h2>
+<p>A folder image exposes a host folder as Atari media. In the interface it is shown with a different label color so it can be distinguished from a regular disk image.</p>
+
+<h2>Booting Atari Executables</h2>
+<p>AspeQt can boot executable files directly without creating a disk image first. You can open an executable from the menu or by dragging it into the window.</p>
+<p>Before booting an executable, AspeQt now prepares the emulator for a clean start. On Android this means the emulator is stopped, mounted disks are removed and the emulator is started again before the file is loaded.</p>
+<p>After the file is loaded, the executable dialog stays open and offers:</p>
+<ul>
+<li><strong>Retry</strong> to boot the same file again</li>
+<li><strong>Open</strong> to pick another executable without returning to the main screen</li>
+<li><strong>Cancel</strong> to close the dialog</li>
+</ul>
+<p>A high speed executable loader is also available in the emulation options. Compatibility still depends on the program being loaded, so some executables may require the normal loader.</p>
+
+<h2>Cassette Playback</h2>
+<p>CAS files can be played back through the cassette command. AspeQt can use the baud rate stored in the image or a custom value configured in the options.</p>
+
+<h2>Printer Emulation</h2>
+<p>AspeQt emulates the Atari text printer device <code>P1:</code>. You can start or stop printer emulation from the main window. Printer output can be previewed, saved or printed.</p>
+
+<h2>Options and Language</h2>
+<p>The options dialog stores hardware, speed and language settings. If the language is set to <code>auto</code>, AspeQt uses the system locale. If you choose a specific language, the interface follows that preference instead.</p>
+<p>The user manual window also follows the selected application language when a translated manual is available.</p>
+
+<h2>Sessions</h2>
+<p>Sessions let you save the current disk setup and selected configuration so that the same environment can be restored later.</p>
+
+<h2>Notes</h2>
+<ul>
+<li>Some advanced features depend on the connected SIO2PC hardware and the selected serial backend.</li>
+<li>High speed modes depend on cable quality, handshake method and Atari-side software support.</li>
+<li>Direct executable booting is convenient, but not every Atari program is compatible with it.</li>
+</ul>
+</body>
+</html>
